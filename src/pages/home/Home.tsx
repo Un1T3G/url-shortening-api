@@ -1,5 +1,11 @@
+import Intro from './components/intro/Intro'
+
 const Home = () => {
-  return <div></div>
+  return (
+    <>
+      <Intro />
+    </>
+  )
 }
 
 export default Home

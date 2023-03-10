@@ -1,0 +1,31 @@
+.btn {
+  border: none;
+  font-weight: 700;
+  padding: 0.4rem 1rem;
+  transition: background-color 0.35s ease;
+
+  &.simple {
+    border-radius: 0.5rem;
+  }
+
+  &.rounded {
+    border-radius: 100px;
+  }
+
+  &.colored {
+    color: #fff;
+    background-color: hsl(180, 66%, 49%);
+
+    &:hover {
+      background-color: hsl(180, 66%, 39%);
+    }
+  }
+
+  &.transparent {
+    background-color: rgba($color: #000000, $alpha: 0);
+
+    &:hover {
+        background-color: rgba($color: #000000, $alpha: .2);
+    }
+  }
+}

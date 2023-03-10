@@ -1,0 +1,46 @@
+.nav{
+    flex: 1;
+
+    &__list{
+        display: flex;
+        list-style: none;
+    }
+
+    &__item{
+        margin-right: 25px;
+
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+
+    &__btn{
+        font-size: 1.8em;
+        font-weight: 500;
+        text-decoration: none;
+        color: hsl(0, 0%, 75%);
+        transition: color .35s ease;
+
+
+        &:hover{
+            color: hsl(255, 11%, 22%);
+        }
+    }
+
+    &__actions{
+        display: flex;
+    }
+
+    &__divider{
+        flex: 1;
+    }
+
+    &__action-btn{
+        font-size: 1.4em;
+        margin-right: 5px;
+
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+}
