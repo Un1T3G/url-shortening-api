@@ -1,6 +1,7 @@
 import { illustrationWorkingImg } from '../../../../assets/img'
 import Button from '../../../../ui/button/Button'
 import Container from '../../../../ui/container/Container'
+import Input from '../input/Input'
 import './Intro.scss'
 
 export default () => {
@@ -23,6 +24,7 @@ export default () => {
           </div>
         </div>
       </Container>
+      <Input/>
     </section>
   )
 }
