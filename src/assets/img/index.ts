@@ -11,6 +11,7 @@ import iconPinterest from './icon-pinterest.svg'
 import iconTwitter from './icon-twitter.svg'
 import illustrationWorkingImg from './illustration-working.svg'
 import logo from './logo.svg'
+import whiteLogo from './white-logo.svg'
 
 export {
   bgBoostDesktopImg,
@@ -26,4 +27,5 @@ export {
   iconTwitter,
   illustrationWorkingImg,
   logo,
+  whiteLogo,
 }
