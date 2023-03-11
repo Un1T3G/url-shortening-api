@@ -1,15 +1,16 @@
-import GetStarted from './components/get-started/GetStarted'
-import Intro from './components/intro/Intro'
-import LinkList from './components/link_list/LinkList'
-import Statistics from './components/statistics/Statistics'
+import CallToAction from './components/call-to-action/CallToAction'
+import Features from './components/features/Features'
+import Hero from './components/hero/Hero'
+import Shortens from './components/shortens/Shortens'
+
 
 const Home = () => {
   return (
     <>
-      <Intro />
-      <LinkList/>
-      <Statistics/>
-      <GetStarted/>
+      <Hero />
+      <Shortens/>
+      <Features/>
+      <CallToAction/>
     </>
   )
 }

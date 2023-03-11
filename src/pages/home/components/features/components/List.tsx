@@ -3,7 +3,7 @@ import Card from './Card'
 
 export default () => {
   return (
-    <div className="statistics__list">
+    <div className="features__list">
       {ListData.map((e) => (
         <Card key={e.title} {...e} />
       ))}

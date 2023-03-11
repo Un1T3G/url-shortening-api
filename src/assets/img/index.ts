@@ -12,6 +12,7 @@ import iconTwitter from './icon-twitter.svg'
 import illustrationWorkingImg from './illustration-working.svg'
 import logo from './logo.svg'
 import whiteLogo from './white-logo.svg'
+import iconBars from './bars.svg'
 
 export {
   bgBoostDesktopImg,
@@ -28,4 +29,5 @@ export {
   illustrationWorkingImg,
   logo,
   whiteLogo,
+  iconBars,
 }

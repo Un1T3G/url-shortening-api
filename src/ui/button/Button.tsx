@@ -1,24 +1,30 @@
-import { HTMLAttributes } from 'react'
+import { ButtonHTMLAttributes, HTMLAttributes } from 'react'
 import { Children } from '../../types/children'
 import './Button.scss'
 import { cn } from '../../utils/cn'
 
 interface IProps {
+  type?: 'button' | 'submit' | 'reset'
   children?: Children
   className?: string
-  type: 'simple' | 'rounded'
+  cornerType: 'simple' | 'rounded'
   variant: 'colored' | 'transparent'
 }
 
 const Button = ({
+  type,
   children,
   className,
-  type,
+  cornerType,
   variant,
   ...rest
 }: IProps & Omit<HTMLAttributes<HTMLButtonElement>, 'className'>) => {
   return (
-    <button {...rest} className={cn('btn', type, variant, className)}>
+    <button
+      type={type ?? 'button'}
+      {...rest}
+      className={cn('btn', cornerType, variant, className)}
+    >
       {children}
     </button>
   )

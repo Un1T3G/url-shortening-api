@@ -1,10 +1,17 @@
+import { RefObject } from 'react'
 import Button from '../../../../ui/button/Button'
+import { cn } from '../../../../utils/cn'
 import Item from './components/Item'
 import './NavigationBar.scss'
 
-export default () => {
+interface IProps{
+  navRef: RefObject<HTMLElement>
+  menuIsOpened: boolean
+}
+
+export default ({navRef, menuIsOpened} : IProps) => {
   return (
-    <nav className="nav">
+    <nav ref={navRef} className={cn('nav', menuIsOpened ? 'show' : undefined)}>
       <ul className="nav__list">
         <Item label="Features" />
         <Item label="Pricing" />
@@ -13,12 +20,16 @@ export default () => {
         <div className="nav__actions">
           <Button
             className="nav__action-btn"
-            type="rounded"
+            cornerType="rounded"
             variant="transparent"
           >
             Sign in
           </Button>
-          <Button className="nav__action-btn" type="rounded" variant="colored">
+          <Button
+            className="nav__action-btn"
+            cornerType="rounded"
+            variant="colored"
+          >
             Login
           </Button>
         </div>
