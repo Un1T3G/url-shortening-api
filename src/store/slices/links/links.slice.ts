@@ -1,10 +1,6 @@
-import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
+import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit'
 import { API_BASE_URL } from '../../../config'
-
-interface ILink {
-  originalLink: string
-  shortenLink: string
-}
+import { ILink } from '../../../models/ILink'
 
 interface IState {
   links: ILink[]
@@ -52,7 +48,11 @@ export const createShortLink = createAsyncThunk<
 const linksSlice = createSlice({
   name: 'links',
   initialState,
-  reducers: {},
+  reducers: {
+    setLinks(state, action: PayloadAction<ILink[]>){
+      state.links = action.payload
+    }
+  },
   extraReducers: (builder) => {
     builder.addCase(createShortLink.pending, (state) => {
       state.error = null
@@ -71,3 +71,4 @@ const linksSlice = createSlice({
 })
 
 export default linksSlice.reducer
+export const {setLinks} = linksSlice.actions
